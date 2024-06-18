@@ -1,0 +1,17 @@
+1 4 3 7 6 5 9
+5,6 2,1 8,3 2,0 2,8
+c d e b a f j g
+
+это после try
+string input = txtArrayInput.Text;
+string input1 = txtArrayInput1.Text;
+это в else
+int[] array = input.Split(' ').Select(s => Int32.Parse(s.Trim())).ToArray();
+ShellSortAndRangeArray<int> arrayHandler = new ShellSortAndRangeArray<int>(array);
+arrayHandler.ShellSort();
+txtSortedArray.Text = String.Join(", ", arrayHandler.GetArray());
+
+double[] array1 = input1.Split(' ').Select(s => Double.Parse(s.Trim())).ToArray();
+ShellSortAndRangeArray<double> arrayHandler1 = new ShellSortAndRangeArray<double>(array1);
+arrayHandler1.ShellSort();
+txtSortedArray1.Text = String.Join(", ", arrayHandler1.GetArray());
